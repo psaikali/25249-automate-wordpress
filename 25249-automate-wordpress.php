@@ -28,7 +28,6 @@ function require_files() {
 	require_once MSK_AUTOMATE_WP_DIR . '/src/api.php';
 	require_once MSK_AUTOMATE_WP_DIR . '/src/frontend.php';
 	require_once MSK_AUTOMATE_WP_DIR . '/src/jobs.php';
-	require_once MSK_AUTOMATE_WP_DIR . '/src/shortcode.php';
 	require_once MSK_AUTOMATE_WP_DIR . '/src/utils.php';
 }
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\require_files' );
