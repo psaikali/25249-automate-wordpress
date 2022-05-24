@@ -70,6 +70,7 @@ add_action( 'msk/import-playlist', __NAMESPACE__ . '\\import_jamendo_playlist_in
 
 /**
  * Récupération des chansons d'une playlist et sauvegarde en métadonnées du post créé.
+ * Fonction exécutée par Action Scheduler de manière asynchrone, après l'import d'une playlist.
  *
  * @param integer $playlist_wp_id
  * @param integer $playlist_jamendo_id

@@ -40,7 +40,7 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\\require_files' );
  * @return void
  */
 function on_activation( $plugin, $network ) {
-	if ( $plugin === MSK_AUTOMATE_WP_BASENAME ) {
+	if ( $plugin === MSK_AUTOMATE_WP_BASENAME && ! wp_next_scheduled( 'msk/cron/import-playlists' ) ) {
 		wp_schedule_event( strtotime( 'tomorrow 02:00' ), 'daily', 'msk/cron/import-playlists', [ 'keyword' => 'electro' ] );
 	}
 }
